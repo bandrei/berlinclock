@@ -16,15 +16,27 @@ public class BerlinClock {
 
     public String[] berlinClock(int hour, int minutes, int seconds){
         String[] berlinTimeSlots = new String[5];
-        int singleMinutes = minutes % 5;
-        berlinTimeSlots[3] = multiMinutes(minutes - minutes % 5);
+        berlinTimeSlots[0] = seconds % 2 == 0 ? "X" : "O";
+        berlinTimeSlots[1] = multiHours(hour / 5);
+        berlinTimeSlots[2] = singleHours(hour % 5);
+        berlinTimeSlots[3] = multiMinutes(minutes);
         berlinTimeSlots[4] = singleMinutes(minutes % 5);
         return berlinTimeSlots;
     }
 
+    public String singleHours(int hours){
+        return StringUtils.repeat("R", hours) +
+                StringUtils.repeat("O", 4 - hours);
+    }
+
     public String singleMinutes(int minutes){
-        return StringUtils.repeat("X",minutes) +
+        return StringUtils.repeat("R",minutes) +
                 StringUtils.repeat("O", 4 - minutes);
+    }
+
+    public String multiHours(int hours){
+        return StringUtils.repeat("R", hours) +
+                StringUtils.repeat("O", 4 - hours);
     }
 
     public String multiMinutes(int minutes){
