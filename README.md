@@ -18,6 +18,8 @@ Otherwise run the jar with the accepted parameters
 
 Input params
 
+```
 -h hour in integer format between 0 and 23 inclusive
 -m minutes in integer format between 0 and 59 inclusive
 -s seconds in integer format between 0 and 59 inclusive
+```
