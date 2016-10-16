@@ -1,15 +1,23 @@
-Camel Java Router Project
+Berlin Clock assignment
 =========================
 
 To build this project use
 
-    mvn install
+    ``mvn install`` or ``mvn package``
 
-To run this project from within Maven use
 
-    mvn exec:java
+To run the application and get an output do:
 
-For more help see the Apache Camel documentation
+If you've packaged to the ``target`` folder:
 
-    http://camel.apache.org/
+``java -jar target/berlin-clock.jar -h <<hour>> -m <<minutes>> -s <<s>>``
 
+Otherwise run the jar with the accepted parameters
+
+``java -jar berlin-clock.jar -h <<hour>> -m <<minutes>> -s <<s>>``
+
+Input params
+
+-h hour in integer format between 0 and 23 inclusive
+-m minutes in integer format between 0 and 59 inclusive
+-s seconds in integer format between 0 and 59 inclusive

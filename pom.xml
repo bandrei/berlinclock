@@ -122,6 +122,8 @@
           </execution>
         </executions>
         <configuration>
+          <finalName>berlin-clock</finalName>
+          <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
